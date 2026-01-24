@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySocial</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      margin: 0;
+    }
+
+    header {
+      background: #1877f2;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    #search {
+      padding: 7px;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+
+    .post-box {
+      background: white;
+      margin: 20px auto;
+      width: 80%;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    #postInput {
+      width: 100%;
+      height: 70px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: none;
+    }
+
+    button {
+      background: #1877f2;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #145dbf;
+    }
+
+    .post {
+      background: white;
+      margin: 10px auto;
+      width: 80%;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .like-btn {
+      background: #e4e6eb;
+      color: #333;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+
+    .like-btn:hover {
+      background: #d8dadf;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MySocial</h1>
+    <input type="text" id="search" placeholder="Search...">
+  </header>
+
+  <section class="post-box">
+    <textarea id="postInput" placeholder="What's on your mind?"></textarea>
+    <br>
+    <button onclick="addPost()">Post</button>
+  </section>
+
+  <section id="feed"></section>
+
+  <script>
+    function addPost() {
+      let postText = document.getElementById("postInput").value;
+      if (postText.trim() === "") return;
+
+      let postDiv = document.createElement("div");
+      postDiv.classList.add("post");
+
+      let content = document.createElement("p");
+      content.innerText = postText;
+      postDiv.appendChild(content);
+
+      let likeButton = document.createElement("button");
+      likeButton.classList.add("like-btn");
+      likeButton.innerText = "👍 Like (0)";
+      
+      let likeCount = 0;
+      likeButton.onclick = function() {
+        likeCount++;
+        likeButton.innerText = `👍 Like (${likeCount})`;
+      }
+
+      postDiv.appendChild(likeButton);
+      document.getElementById("feed").prepend(postDiv);
+      document.getElementById("postInput").value = "";
+    }
+  </script>
+</body>
+</html>
