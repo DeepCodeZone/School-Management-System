@@ -44,6 +44,106 @@
   </div>
 
 </section>
+<section class="vision-mission-section">
+    <div class="hover">
+  <div class="container">
+    <h2 class="section-title text-animate">Our Vision & Mission</h2>
+    
+    <div class="cards">
+      <!-- Vision Card -->
+      <div class="card text-animate">
+        <h3>Our Vision</h3>
+        <p style="text-align: center;">
+          To nurture lifelong learners who are compassionate, creative, and responsible global citizens, 
+          equipped with knowledge, skills, and values to excel in every field of life.
+        </p>
+      </div>
+
+      <!-- Mission Card -->
+      <div class="card text-animate">
+        <h3>Our Mission</h3>
+        <ul>
+          <li>Provide quality education that inspires curiosity and critical thinking.</li>
+          <li>Foster an inclusive and supportive learning environment.</li>
+          <li>Encourage holistic development through academics, arts, and sports.</li>
+          <li>Instill ethical values, discipline, and social responsibility in students.</li>
+          <li>Integrate technology and innovation into everyday learning.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="academic-achievements-section">
+  <div class="container">
+    <h2 class="section-title text-animate">Academic Achievements</h2>
+
+    <!-- ===== Academic Progress Section ===== -->
+    <h3 class="sub-title text-animate">Academic Progress (Last 5 Years)</h3>
+    <div class="progress-cards">
+      <div class="progress-card text-animate">
+        <h4>2021</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 60%;">60%</div>
+        </div>
+      </div>
+      <div class="progress-card text-animate">
+        <h4>2022</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 68%;">68%</div>
+        </div>
+      </div>
+      <div class="progress-card text-animate">
+        <h4>2023</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%;">75%</div>
+        </div>
+      </div>
+      <div class="progress-card text-animate">
+        <h4>2024</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 82%;">82%</div>
+        </div>
+      </div>
+      <div class="progress-card text-animate">
+        <h4>2025</h4>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 90%;">90%</div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- ===== Graph Section ===== -->
+    <h3 class="sub-title text-animate">Academic & NEB Progress Graph</h3>
+    <div class="graph-container text-animate">
+
+      <!-- Academic Progress Graph -->
+      <div class="graph-title">Academic Progress (%)</div>
+      <div class="graph">
+        <div class="bar" style="height: 60%;">2021</div>
+        <div class="bar" style="height: 68%;">2022</div>
+        <div class="bar" style="height: 75%;">2023</div>
+        <div class="bar" style="height: 82%;">2024</div>
+        <div class="bar" style="height: 90%;">2025</div>
+      </div>
+
+      <!-- NEB Pass Rate Graph -->
+      <div class="graph-title">NEB Examination Pass Rate (%)</div>
+      <div class="graph">
+        <div class="bar neb" style="height: 95%;">2021</div>
+        <div class="bar neb" style="height: 97%;">2022</div>
+        <div class="bar neb" style="height: 98%;">2023</div>
+        <div class="bar neb" style="height: 99%;">2024</div>
+        <div class="bar neb" style="height: 100%;">2025</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 </body>
 </html>
@@ -104,13 +204,14 @@ body {
 }
 /* Add extra space after every 3 images (each row) */
 .gallery img:nth-child(3n) {
-  margin-bottom: 50px;   /* adjust value as you like */
+  margin-bottom: 40px;   /* adjust value as you like */
 }
 
 .gallery-section{
     animation: text-appear both;
     animation-timeline: view(2% 1%);
-    animation-range: entry 10% cover 50vh;
+    animation-range: entry 10% cover 100vh;
+    
 }
 
 @keyframes text-appear {
@@ -127,7 +228,7 @@ body {
 /* image */
 .gallery img{
     animation: imagereveal both;
-    animation-timeline: view(2% 1%);
+    animation-timeline: view(2% 3%);
 }
 @keyframes imagereveal{
     from{
@@ -143,7 +244,272 @@ body {
         translate: ;
     }
 }
+/* ===== Section Styling ===== */
+.vision-mission-section {
+    padding: 80px 20px;
+    background: #f9f9f9; /* light neutral background */
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
 
+/* Container */
+.vision-mission-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Section Title */
+.vision-mission-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #1a1a1a; /* dark color for title */
+    font-weight: 600;
+}
+
+/* Cards Layout */
+.vision-mission-section .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Card */
+.vision-mission-section .card {
+    background: #fff; /* simple white card */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    padding: 30px 20px;
+    flex: 1 1 300px;
+    max-width: 450px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+/* Card Hover Effect */
+.vision-mission-section .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+/* Card Titles */
+.vision-mission-section .card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+/* Card Paragraphs */
+.vision-mission-section .card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Card List */
+.vision-mission-section .card ul {
+    list-style: disc inside;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vision-mission-section .cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* Text animation (from previous CSS) */
+.text-animate {
+    animation: text-appear both;
+    animation-timeline: view(10% 5%);
+    animation-range: entry 20% cover 100vh;
+}
+/* ===== Section Styling ===== */
+.academic-achievements-section {
+    padding: 80px 20px;
+    background: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* Container */
+.academic-achievements-section .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Titles */
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+.sub-title {
+    font-size: 1.8rem;
+    margin: 30px 0 20px;
+    font-weight: 600;
+}
+
+/* ===== Academic Progress Cards ===== */
+.progress-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.progress-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    flex: 1 1 150px;
+    max-width: 180px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.progress-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+.progress-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    background: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.progress-fill {
+    background: #1a73e8;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 1.5s ease-in-out;
+}
+
+/* ===== NEB Examination Graph ===== */
+.neb-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #555;
+    text-align: center;
+}
+
+.neb-graph {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.neb-bar .year {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.bar-container {
+    background: #e0e0e0;
+    border-radius: 25px;
+    overflow: hidden;
+    height: 25px;
+    width: 100%;
+}
+
+.bar-fill {
+    background: #1a73e8;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+    transition: width 1.5s ease-in-out;
+}
+
+.bar-fill.neb {
+    background: #28a745;
+}
+
+/* ===== Graph Section ===== */
+.graph-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.graph-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.graph {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 700px;
+    height: 250px;
+    background: #eaeaea;
+    border-radius: 12px;
+    padding: 10px;
+    position: relative;
+}
+
+.bar {
+    width: 15%;
+    background: #1a73e8;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    transition: height 1.5s ease-in-out;
+}
+
+.bar.neb {
+    background: #28a745;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .progress-cards { flex-direction: column; gap: 20px; }
+    .neb-graph { gap: 12px; }
+    .graph { height: 200px; }
+    .bar { width: 18%; }
+}
+
+/* ===== Text Animation ===== */
+.text-animate {
+    animation: text-appear both;
+    animation-timeline: view(10% 5%);
+    animation-range: entry 20% cover 100vh;
+}
+
+@keyframes text-appear {
+    from { opacity: 0; transform: translateY(50px);}
+    to { opacity: 1; transform: translateY(0);}
+}
 
 
 
