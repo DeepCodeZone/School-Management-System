@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* italy-body */
+.story-section {
+  padding: 100px 20px;
+  background-color: var(--color-7);
+}
+
+.about-div {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 15px;
+  text-align: center;
+}
+
+.royan-story {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: black;
+}
+
+.about-div p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-2);
+  margin-bottom: 20px;
+}
+
+.royan-italy {
+  margin-bottom: 10px;
+  font-size: 1.7rem;
+  color: var(--color-8);
+  font-family: "Courgette", cursive;
+}
+
+@media (max-width: 768px) {
+  .royan-italy {
+    font-size: 2.5rem;
+  }
+
+  .royan-story {
+    font-size: 3rem;
+  }
+
+  .about-div p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .story-section {
+    padding: 50px 10px;
+  }
+
+  .royan-italy {
+    font-size: 2rem;
+  }
+
+  .royan-story {
+    font-size: 2.5rem;
+  }
+
+  .about-div p {
+    font-size: 0.9rem;
+  }
+}
+
+/* delicioustext */
+.recipes-section {
+  padding: 100px 20px;
+}
+
+.restaurant-section {
+  padding-bottom: 100px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.div-delicious {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 1200px;
+  height: auto;
+}
+
+.div-delicious p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-2);
+}
+
+.div-delicious h1 {
+  font-size: 3rem;
+  line-height: 1.8;
+  letter-spacing: 4px;
+}
+
+.div-delicious h3 {
+  font-size: 2rem;
+  color: var(--color-6);
+  font-family: "Courgette", cursive;
+  margin-bottom: 5px;
+}
+
+.image-zoom-div {
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.image-zoom {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: 15px;
+}
+
+.image-zoom:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .image-zoom-div {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .div-delicious h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+
+  .div-delicious h3 {
+    font-size: 1.5rem;
+  }
+
+  .div-delicious p {
+    font-size: 0.9rem;
+  }
+
+  .recipes-section {
+    padding: 50px 20px;
+  }
+}
+
+/* CHEF */
+.chef-section {
+  padding: 100px 20px;
+}
+
+.div-delicious-2 h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 10px;
+}
+
+.div-delicious-2 h3 {
+  font-size: 2rem;
+  color: var(--color-6);
+  font-family: "Courgette", cursive;
+  margin-bottom: 5px;
+}
+
+.royan-chef-head {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.grid {
+  display: grid;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.chef-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.chef-intro {
+  padding: 20px;
+  border: 1px solid var(--color-3);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--color-4);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+  max-width: 250px;
+}
+.div-for-chef{
+  max-width: 300px;
+}
+.chef-intro img {
+  transition: transform 0.6s ease;
+}
+
+.chef-intro img:hover {
+  transform: scale(1.1);
+}
+
+.chef-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-5);
+  margin-top: 15px;
+}
+
+.chef-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-1);
+}
+
+.chef-description {
+  font-size: 1rem;
+  color: var(--color-2);
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.div-for-chef {
+  transition: transform 0.6s ease;
+}
+
+.div-for-chef:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 998px) {
+  .grid{
+    gap: 20px;
+  }
+  .chef-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+}
+
+@media (max-width: 768px) {
+  .div-delicious-2 h1 {
+    font-size: 2rem;
+  }
+
+  .div-delicious-2 h3 {
+    font-size: 1.5rem;
+  }
+
+  .chef-section {
+    padding: 50px 10px;
+  }
+
+  .chef-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  .chef-intro {
+    padding: 15px;
+
+  }
+  .grid{
+    gap: 15px;
+  }
+  .chef-name {
+    font-size: 1.3rem;
+  }
+
+  .chef-title {
+    font-size: 1rem;
+  }
+
+  .chef-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .chef-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chef-intro {
+    padding: 10px;
+  }
+
+  .chef-name {
+    font-size: 1.2rem;
+  }
+
+  .chef-title {
+    font-size: 0.9rem;
+  }
+
+  .chef-description {
+    font-size: 0.8rem;
+  }
+}
