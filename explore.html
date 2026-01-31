@@ -48,7 +48,7 @@
     <div class="hover">
   <div class="container">
     <h2 class="section-title text-animate">Our Vision & Mission</h2>
-    
+    <div class="miss">
     <div class="cards">
       <!-- Vision Card -->
       <div class="card text-animate">
@@ -70,6 +70,7 @@
           <li>Integrate technology and innovation into everyday learning.</li>
         </ul>
       </div>
+    </div>
     </div>
   </div>
   </div>
@@ -108,7 +109,7 @@
       <div class="progress-card text-animate">
         <h4>2025</h4>
         <div class="progress-bar">
-          <div class="progress-fill" style="width: 90%;">90%</div>
+          <div class="progress-fill" style="width: 95%;">95%</div>
         </div>
       </div>
     </div>
@@ -141,10 +142,23 @@
     </div>
   </div>
 </section>
+<section class="admission-section">
+
+  <!-- Left info panel -->
+  <div class="admission-info" style="width: 60%; text-align: center;">
+    <h1>Admissions Open 🎓</h1>
+    <p>
+      Apply now to join our institution. Click the button below to fill
+      out the online admission form easily.
+    </p>
 
 
+   <a href="admission.html" class="admission-toggle">Apply For Admission</a>
+    
+  </div>
+  </section>
 
-
+  
 </body>
 </html>
 <style>
@@ -191,7 +205,18 @@ body {
 .gallery img {
   width: 100%;
   height: 260px;            /* HEIGHT INCREASED */
-  object-fit: cover;
+  object-fit: cover;.stylish-paragraph {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-left: 4px solid #4a90e2;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -510,8 +535,65 @@ body {
     from { opacity: 0; transform: translateY(50px);}
     to { opacity: 1; transform: translateY(0);}
 }
+.miss {
+font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-left: 4px solid #4a90e2;
+  border-radius: 6px;
+  margin: 15px 0;
+}
+body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #eef2f7;
+      margin: 0;
+      padding: 20px;
+      
+    }
 
+    
 
+    /* Left info panel */
+    .admission-info {
+      flex: 1 1 300px;
+      background: linear-gradient(135deg, #4a90e2, #6fb1fc);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    .admission-info h1 {
+      font-size: 32px;
+      margin-top: 0;
+    }
+
+    .admission-info p {
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* Checkbox hack button */
+    .admission-toggle {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background: white;
+      color: #4a90e2;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .admission-toggle:hover {
+      background: #f1f1f1;
+    }
+
+    
 
 
 </style>
