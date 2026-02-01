@@ -144,19 +144,124 @@
 </section>
 <section class="admission-section">
 
-  <!-- Left info panel -->
-  <div class="admission-info" style="width: 60%; text-align: center;">
+  <!-- Background Video -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="create.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Content -->
+  <div class="admission-info rotate-box">
     <h1>Admissions Open 🎓</h1>
+
     <p>
-      Apply now to join our institution. Click the button below to fill
-      out the online admission form easily.
+      Apply now to join our institution.
+      Click the button below to fill out the online admission form easily.
     </p>
 
-
-   <a href="admission.html" class="admission-toggle">Apply For Admission</a>
-    
+    <a href="admission.html" class="admission-toggle">
+      Apply For Admission
+    </a>
   </div>
-  </section>
+
+</section>
+<br>
+<br><br><br><br>
+
+<section class="leader-section">
+  <h2>Our Leadership</h2>
+  <div class="leader-container">
+    
+    <!-- Founder / Principal -->
+    <div class="leader-card">
+      <img src="images/founder-principal.jpg" alt="Founder Principal of Feins Academic School">
+      <h3>Founder & Principal</h3>
+      <h4>Mr.ABC</h4>
+      <p>
+        Our vision is to establish a school that fosters excellence, innovation, and
+        holistic growth, ensuring every student reaches their full potential.
+      </p>
+    </div>
+
+    <!-- Principal -->
+    <div class="leader-card">
+      <img src="images/principal.jpg" alt="Principal of Feins Academic School">
+      <h3>Principal</h3>
+      <h4>Mr.Sonam Tamang</h4>
+      <p>
+        We aim to provide quality education and inspire students to become responsible
+        and capable individuals ready for the challenges of the world.
+      </p>
+    </div>
+
+    <!-- Vice Principal -->
+    <div class="leader-card">
+      <img src="images/vice-principal.jpg" alt="Vice Principal of Feins Academic School">
+      <h3>Vice Principal</h3>
+      <h4>Mr.Deep Darshan Shrestha</h4>
+      <p>
+        We aim to create a supportive and inclusive learning environment
+        where every student is encouraged to grow academically,
+        socially, and emotionally.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bus Information -->
+<section class="bus-info">
+    <h2>Bus Details</h2>
+    <div class="bus-card">
+        <p><strong>Bus Number:</strong> B-101</p>
+        <p><strong>Driver:</strong> Ram Bahadur</p>
+        <p><strong>Contact:</strong> 9801234567</p>
+        <p><strong>Status:</strong> <span class="status">On Route</span></p>
+    </div>
+</section>
+
+<!-- Student Information -->
+<section class="student-info" style="color: green;">
+    <h2>Student Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Pickup Point</th>
+                <th>Drop Point</th>
+                <th>Bus Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ram Shrestha</td>
+                <td>5A</td>
+                <td>Kalanki</td>
+                <td>Balaju</td>
+                <td>B-101</td>
+            </tr>
+            <tr>
+                <td>Sita Koirala</td>
+                <td>6B</td>
+                <td>Jhamsikhel</td>
+                <td>Koteshwor</td>
+                <td>B-102</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <h2>Bus Location</h2>
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.123456789!2d85.324!3d27.717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1903f12e3f7d%3A0x7f5d3b33f123456!2sKathmandu!5e0!3m2!1sen!2snp!4v1678901234567!5m2!1sen!2snp"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
 
   
 </body>
@@ -553,47 +658,227 @@ body {
       padding: 20px;
       
     }
+/* Section base */
+.admission-section {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    
+/* Video styling + fade animation */
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  animation: videoFade 6s ease-in-out infinite;
+}
 
-    /* Left info panel */
-    .admission-info {
-      flex: 1 1 300px;
-      background: linear-gradient(135deg, #4a90e2, #6fb1fc);
-      color: white;
-      padding: 40px;
-      border-radius: 15px;
-    }
+/* Video fade keyframes */
+@keyframes videoFade {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
 
-    .admission-info h1 {
-      font-size: 32px;
-      margin-top: 0;
-    }
+/* Admission info box */
+.admission-info {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 500px;
+  backdrop-filter: blur(6px);
+}
 
-    .admission-info p {
-      font-size: 16px;
-      line-height: 1.6;
-      text-align: center;
-    }
+/* Rotating animation */
+.rotate-box {
+  animation: rotateSlow 10s linear infinite;
+  transform-style: preserve-3d;
+}
 
-    /* Checkbox hack button */
-    .admission-toggle {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 20px;
-      font-size: 16px;
-      background: white;
-      color: #4a90e2;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+/* Rotation keyframes */
+@keyframes rotateSlow {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 
-    .admission-toggle:hover {
-      background: #f1f1f1;
-    }
+/* Button styling */
+.admission-toggle {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ffcc00;
+  color: #000;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
 
-    
+.admission-toggle:hover {
+  transform: scale(1.1);
+}
 
+/* Section Styling */
+.leader-section {
+  padding: 60px 20px;
+  background: #f4f7fc;
+  text-align: center;
+}
+
+.leader-section h2 {
+  font-size: 2.2rem;
+  color: #2a5298;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* Grid layout for cards */
+.leader-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 40px; /* space between cards */
+  justify-items: center; /* center cards inside each column */
+}
+
+/* Individual card styling */
+.leader-card {
+  background: #fff;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px; /* limit card width */
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.leader-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #2a5298;
+}
+
+.leader-card h3 {
+  color: #2a5298;
+  margin-bottom: 5px;
+}
+
+.leader-card h4 {
+  color: #555;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.leader-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1000px) {
+  .leader-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 30px;
+  }
+}
+
+@media (max-width: 650px) {
+  .leader-container {
+    grid-template-columns: 1fr; /* 1 card per row */
+    gap: 20px;
+  }
+}
+
+
+/* General Section Styling */
+.bus-info, .student-info, .map-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fefefe; /* soft white */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Bus Card */
+.bus-card {
+    background-color: #d0f0ed; /* soft teal */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.bus-card p {
+    margin: 8px 0;
+    font-size: 1em;
+    color: #333;
+}
+
+.status {
+    color:green; /* nicer green */
+    font-weight: bold;
+}
+
+/* Student Table */
+.student-info table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.student-info th, .student-info td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-info th {
+    background-color:green; /* soft teal */
+    color: white;
+}
+
+.student-info tr:hover {
+    background-color: #e0f2f1; /* very soft teal on hover */
+}
+
+/* Map Section */
+.map-section h2 {
+    margin-bottom: 15px;
+    color: green; /* teal-ish heading */
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
 </style>
